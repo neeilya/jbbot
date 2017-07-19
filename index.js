@@ -6,18 +6,21 @@ const logger = require('./src/logger');
 const { sortCandlesByDate, getTimestampInSeconds, compareTwoNumbers } = require('./src/utils');
 const { calculateLine } = require('./src/ichimoku');
 const poloniex = new Poloniex;
+const signals = {};
 
 /**
  * Actual code
  */
 
-setInterval(() => {
+run();
+
+setInterval(run, config.iteratingInterval);
+
+function run() {
   config.tickers.forEach(ticker => {
     iterate(ticker.toUpperCase());
   });
-}, 5000);
-
-const signals = {};
+};
 
 function iterate(ticker) {
   poloniex

@@ -1,5 +1,6 @@
 module.exports = {
-  intervalInMilliseconds: 0.5 /*interval in seconds*/ * 1000,
+  // iteration interval
+  intervalInMilliseconds: 5 * 60 /*interval in seconds*/ * 1000,
 
   /**
    * Ichimoku settings
