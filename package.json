@@ -1,0 +1,21 @@
+{
+  "name": "jbbot",
+  "version": "0.0.1",
+  "description": "Crypto trading bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilya Nee",
+  "license": "ISC",
+  "dependencies": {
+    "pm2": "^2.5.0",
+    "poloniex-api-node": "^1.3.1"
+  },
+  "devDependencies": {
+    "moment": "^2.18.1",
+    "nodemailer": "^4.0.1",
+    "winston": "^2.3.1"
+  }
+}
