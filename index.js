@@ -54,12 +54,16 @@ function iterate(ticker) {
         }
 
         if (currentState !== state && currentState !== 0) {
-          if (signals[ticker].last && signals[ticker].last.state === currentState) {
+          if (signals[ticker] && signals[ticker].last && signals[ticker].last.state === currentState) {
             break;
           }
 
           // notify
-          signals[ticker].last = { state: currentState };
+          signals[ticker] = {
+            last: {
+              state: currentState
+            }
+          };
 
           mailer.sendMail({
             from: 'neeilya@mail.ru',
