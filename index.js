@@ -75,8 +75,8 @@ function iterate(ticker) {
           });
 
           logger.log('info', 'Cross point', {
-            ticker: ticker.toUpperCase(),
             date: moment().format('MMMM Do YYYY, HH:mm:ss'),
+            ticker: ticker.toUpperCase(),
             conversionLine,
             baseLine
           });
