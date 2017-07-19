@@ -69,6 +69,8 @@ function iterate(ticker) {
             from: config.mail_user,
             to: config.notify_emails.join(', '),
             subject: 'Jbbot cross point notification',
+            conversionLine,
+            baseLine,
             text: `${ ticker.toUpperCase() }, cross point just happened!`
           });
 
