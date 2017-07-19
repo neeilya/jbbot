@@ -66,8 +66,8 @@ function iterate(ticker) {
           };
 
           mailer.sendMail({
-            from: 'neeilya@mail.ru',
-            to: 'haxisann@gmail.com',
+            from: config.mail_user,
+            to: config.notify_emails.join(', '),
             subject: 'Jbbot cross point notification',
             text: `${ ticker.toUpperCase() }, cross point just happened!`
           });

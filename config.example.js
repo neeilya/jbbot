@@ -24,5 +24,9 @@ module.exports = {
 
   // mail settings
   mail_user: 'username@example.com',
-  mail_password: 'password'
+  mail_password: 'password',
+
+  notify_emails: [
+    // emails to notify
+  ]
 };
