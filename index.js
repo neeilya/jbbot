@@ -12,9 +12,16 @@ const signals = {};
  * Actual code
  */
 
-run();
+// run();
+//
+// setInterval(run, config.iteratingInterval);
 
-setInterval(run, config.iteratingInterval);
+mailer.sendMail({
+  from: config.mail_user,
+  to: config.notify_emails.join(', '),
+  subject: 'Jbbot test email notification',
+  text: `test`
+});
 
 function run() {
   config.tickers.forEach(ticker => {
